@@ -1,5 +1,6 @@
 # Install az CLI using PIP
 FROM jenkins/inbound-agent:alpine
+USER root
 ENV AZ 2.0.64
 RUN apk add -U python3 bash ca-certificates && \
     apk add --virtual=build gcc python3-dev musl-dev libffi-dev openssl-dev make  && \
